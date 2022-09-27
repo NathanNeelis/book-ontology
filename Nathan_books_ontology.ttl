@@ -11,14 +11,16 @@
     rdfs:label "Genre" ;
     rdfs:comment "A style of category of literature" .
     
-    # genres Types 
-    :Fantasy a :Genre ;
+        # genres Types 
+        :Fantasy a :Genre ;
         rdfs:label "Fantasy" ;
         rdfs:comment "Fantasy is a genre of speculative fiction involving magical elements." .
-    :sciFi a :Genre ;
+        
+        :sciFi a :Genre ;
         rdfs:label "Science Fiction" ;
         rdfs:comment "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future." .  
-    :Educational a :Genre ;
+        
+        :Educational a :Genre ;
         rdfs:label "Educational" ;
         rdfs:comment "Educational is a genre of books that have educational purposes" . 
 
@@ -31,14 +33,14 @@
     rdfs:label "Languauge of the book" ;
     rdfs:comment "The languauge this edition of the book is written in" .
 
-    # is this the right way to do it??
-    :English a rdf:Property ;
+        # is this the right way to do it??
+        :English a rdf:Property ;
         rdfs:label "English (UK)" ;
         rdfs:comment "The book is written in English" ;
         rdfs:domain :Language ;
         rdfs:range :Language .
 
-    :Dutch a rdf:Property ;
+        :Dutch a rdf:Property ;
         rdfs:label "Dutch (NL)" ;
         rdfs:comment "The book is written in Dutch" ;
         rdfs:domain :Language ;
@@ -51,21 +53,21 @@
     rdfs:label "The format of the book" ;
     rdfs:comment "In what format comes this edition of the book" .
 
-    :hardCover a :Format ;
-    rdfs:label "Edition hardcover";
-    rdfs:comment "A book with a solid hard cover" .
+        :hardCover a :Format ;
+        rdfs:label "Edition hardcover";
+        rdfs:comment "A book with a solid hard cover" .
 
-    :paperBack a :Format ;
-    rdfs:label "Edition paperback";
-    rdfs:comment "A book with a flexible paper cover" .
+        :paperBack a :Format ;
+        rdfs:label "Edition paperback";
+        rdfs:comment "A book with a flexible paper cover" .
 
-    :Ebook a :Format ;
-    rdfs:label "Edition Ebook";
-    rdfs:comment "A digital format of the book" .
+        :Ebook a :Format ;
+        rdfs:label "Edition Ebook";
+        rdfs:comment "A digital format of the book" .
 
-    :Audiobook a :Format ;
-    rdfs:label "Edition Audiobook";
-    rdfs:comment "A audio edition where the book is read" .
+        :Audiobook a :Format ;
+        rdfs:label "Edition Audiobook";
+        rdfs:comment "A audio edition where the book is read" .
 
 
 
