@@ -1,0 +1,176 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# resource 
+:Book a rdfs:Class .
+
+# subclasses 
+:Genre a rdfs:Class ;
+    rdfs:subClassOf :Book ;
+    rdfs:label "Genre" ;
+    rdfs:comment "A style of category of literature" .
+    
+    # genres Types 
+    :Fantasy a :Genre ;
+        rdfs:label "Fantasy" ;
+        rdfs:comment "Fantasy is a genre of speculative fiction involving magical elements." .
+    :sciFi a :Genre ;
+        rdfs:label "Science Fiction" ;
+        rdfs:comment "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future." .  
+    :Educational a :Genre ;
+        rdfs:label "Educational" ;
+        rdfs:comment "Educational is a genre of books that have educational purposes" . 
+
+:Author a :Book ;
+    rdfs:label "The Author name" ;
+    rdfs:comment "The Author that wrote the book" .
+
+:Language a rdfs:Class ;
+    rdfs:subClassOf :Book ;
+    rdfs:label "Languauge of the book" ;
+    rdfs:comment "The languauge this edition of the book is written in" .
+
+    # is this the right way to do it??
+    :English a rdf:Property ;
+        rdfs:label "English (UK)" ;
+        rdfs:comment "The book is written in English" ;
+        rdfs:domain :Language ;
+        rdfs:range :Language .
+
+    :Dutch a rdf:Property ;
+        rdfs:label "Dutch (NL)" ;
+        rdfs:comment "The book is written in Dutch" ;
+        rdfs:domain :Language ;
+        rdfs:range :Language .
+
+
+
+:Format a rdfs:Class ;
+    rdfs:subClassOf :Book ;
+    rdfs:label "The format of the book" ;
+    rdfs:comment "In what format comes this edition of the book" .
+
+    :hardCover a :Format ;
+    rdfs:label "Edition hardcover";
+    rdfs:comment "A book with a solid hard cover" .
+
+    :paperBack a :Format ;
+    rdfs:label "Edition paperback";
+    rdfs:comment "A book with a flexible paper cover" .
+
+    :Ebook a :Format ;
+    rdfs:label "Edition Ebook";
+    rdfs:comment "A digital format of the book" .
+
+    :Audiobook a :Format ;
+    rdfs:label "Edition Audiobook";
+    rdfs:comment "A audio edition where the book is read" .
+
+
+
+:Publication a rdfs:Class ;
+    rdfs:subClassOf :Book ;
+    rdfs:label "Publication information";
+    rdfs:comment "Publication data and location" .
+
+        :Publisher a :Publication ;
+        rdfs:label "The publisher of the book";
+        rdfs:comment "The company that published the book" .
+
+        :PublicationDate a :Publication ;
+        rdfs:label "Publication date (year)" ;
+        rdfs:comment "Year of the publication" .
+
+        :PublicationLocation a :Publication ;
+        rdfs:label "Publication Location (country, city)" ;
+        rdfs:comment "The location where the book is published" .
+
+
+
+:Title a rdfs:Class ;
+    rdfs:subClassOf :Book ;
+    rdfs:label "Title" ;
+    rdfs:comment "The title of the book" .
+
+:SubTitle a :Title ;
+    rdfs:label "Subtitle" ;
+    rdfs:comment "Subtitle of the book" .
+
+
+:isWrittenBy a rdf:Property ;
+    rdfs:domain :Book ;
+    rdfs:range :Author .
+
+:isWrittinIn a rdf:Property ;
+    rdfs:domain :Language ;
+    rdfs:range  :English ;
+    rdfs:range  :Dutch .
+
+:isFormat a rdf:Property ;
+    rdfs:domain :Format ;
+    rdfs:range :paperBack ;
+    rdfs:range :hardCover ;
+    rdfs:range :Audiobook ;
+    rdfs:range :Ebook .
+
+:isGenre a rdf:Property  ;
+    rdfs:domain :Genre ;
+    rdfs:range :Fantasy ;
+    rdfs:range :sciFi ;
+    rdfs:range :Educational.
+
+:isPublishedBy a rdf:Property ;
+    rdfs:domain :Publication ;
+    rdfs:range :Publisher .
+
+:isPublishedOn a rdf:property ;
+    rdfs:domain :Publication ;
+    rdfs:range :PublicationDate .
+
+:isPublishedIn a rdf:property ;
+    rdfs:domain :Publication ;
+    rdfs:range :PublicationLocation .
+
+
+
+#  data example
+:Andrzej_Sapkowski a :Author .
+:Robert_Cialdini a :Author .
+
+:Gollancz a :Publisher .
+:Random_House_Books a :Publisher .
+
+
+:The_Witcher    :Title "The Witcher" ;
+                :SubTitle "The Last Wish" ;
+                :isWrittinIn :English ;
+                :isWrittenBy :Andrzej_Sapkowski ;
+                :isFormat :paperBack ;
+                :isGenre :Fantasy ;
+                :isPublishedBy :Gollancz ;
+                :isPublishedOn 2017 ;
+                :isPublishedIn "United Kingdom" .
+
+:Pre_Suasion    :Title "Pre-Suasion" ;
+                :isWrittenBy :Robert_Cialdini ;
+                :isWrittinIn :English ;
+                :isFormat :paperBack ;
+                :isGenre :Educational ;
+                :isPublishedBy :Random_House_Books ;
+                :isPublishedOn 2017 ;
+                :isPublishedIn "United Kingdom" .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
