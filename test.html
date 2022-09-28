@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nathans books Ontology</title>
+    <title>Books Ontology</title>
     <style>
         #pylode {
             position: fixed;
@@ -274,18 +274,18 @@ code{
     <script id="schema.org" type="application/ld+json">
 [
   {
-    "@id": "http://purl.obolibrary.org/obo/bfo.owl#Nathan_Book_Ontology",
+    "@id": "http://www.example.org/book#Book",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
     "https://schema.org/description": [
       {
-        "@value": "some a book ontology"
+        "@value": "An ontology based on books that includes metadata to describe a book."
       }
     ],
     "https://schema.org/name": [
       {
-        "@value": "Nathans books Ontology"
+        "@value": "Books Ontology"
       }
     ]
   }
@@ -295,7 +295,7 @@ code{
   <body>
     <div id="content">
       <div class="section" id="metadata">
-        <h1>Nathans books Ontology</h1>
+        <h1>Books Ontology</h1>
         <h2>Metadata</h2>
         <dl>
           <div>
@@ -303,26 +303,327 @@ code{
               <strong>IRI</strong>
             </dt>
             <dd>
-              <code>http://purl.obolibrary.org/obo/bfo.owl#Nathan_Book_Ontology</code>
+              <code>http://www.example.org/book#Book</code>
             </dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
             </dt>
-            <dd><p>Nathans books Ontology</p></dd>
+            <dd><p>Books Ontology</p></dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
             </dt>
-            <dd><p>some a book ontology</p></dd>
+            <dd><p>An ontology based on books that includes metadata to describe a book.</p></dd>
           </div>
         </dl>
       </div>
+      <div class="section" id="classes">
+        <h2>Classes</h2>
+        <div class="property entity" id="Genre">
+          <h3>Genre
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Genre</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A style of category of literature</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#Fantasy">Fantasy</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#sciFi">sciFi</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Educational">Educational</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isGenre">isGenre</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Languaugeofthebook">
+          <h3>Languauge of the book
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Language</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The languauge this edition of the book is written in</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#English">English</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Dutch">Dutch</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isWrittinIn">isWrittinIn</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#English">English</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Dutch">Dutch</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Theformatofthebook">
+          <h3>The format of the book
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Format</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>In what format comes this edition of the book</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isFormat">isFormat</a>
+                  <sup class="sup-p" title="RDF Property">p</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Publicationinformation">
+          <h3>Publication information
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Publication</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Publication data and location</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#isPublishedBy">isPublishedBy</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#isPublishedOn">isPublishedOn</a>
+                  </li>
+                  <li>
+                    <a href="#isPublishedIn">isPublishedIn</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Title">
+          <h3>Title
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Title</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The title of the book</p></td>
+            </tr>
+          </table>
+        </div>
+      </div>
       <div class="section" id="properties">
         <h2>Properties</h2>
-        <div class="property entity" id="English(UK)">
+        <div class="property entity" id="Fantasy">
+          <h3>Fantasy
+            <sup class="sup-p" title="RDF Property">p</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Fantasy</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Fantasy is a genre of speculative fiction involving magical elements.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Genre">Genre</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="sciFi">
+          <h3>Science Fiction
+            <sup class="sup-p" title="RDF Property">p</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#sciFi</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Science fiction is a genre of fiction in which the stories often tell about science and technology of the future.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Genre">Genre</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Educational">
+          <h3>Educational
+            <sup class="sup-p" title="RDF Property">p</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.example.org/book#Educational</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Educational is a genre of books that have educational purposes</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Genre">Genre</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="English">
           <h3>English (UK)
             <sup class="sup-p" title="RDF Property">p</sup>
           </h3>
@@ -330,7 +631,7 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#English</code>
+                <code>http://www.example.org/book#English</code>
               </td>
             </tr>
             <tr>
@@ -344,7 +645,10 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Language">Language</a>
+                <span>
+                  <a href="#Languaugeofthebook">Language</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -352,12 +656,15 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="#Language">Language</a>
+                <span>
+                  <a href="#Languaugeofthebook">Language</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Dutch(NL)">
+        <div class="property entity" id="Dutch">
           <h3>Dutch (NL)
             <sup class="sup-p" title="RDF Property">p</sup>
           </h3>
@@ -365,7 +672,7 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#Dutch</code>
+                <code>http://www.example.org/book#Dutch</code>
               </td>
             </tr>
             <tr>
@@ -379,7 +686,10 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Language">Language</a>
+                <span>
+                  <a href="#Languaugeofthebook">Language</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -387,7 +697,10 @@ code{
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <a href="#Language">Language</a>
+                <span>
+                  <a href="#Languaugeofthebook">Language</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -400,8 +713,14 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#isWrittenBy</code>
+                <code>http://www.example.org/book#isWrittenBy</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The book is writtin by the following author</p></td>
             </tr>
             <tr>
               <th>
@@ -429,15 +748,24 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#isWrittinIn</code>
+                <code>http://www.example.org/book#isWrittinIn</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The book is writtin in a certain language</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Language">Language</a>
+                <span>
+                  <a href="#Languaugeofthebook">Language</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -448,13 +776,13 @@ code{
                 <ul>
                   <li>
                     <span>
-                      <a href="#English(UK)">English</a>
+                      <a href="#English">English</a>
                       <sup class="sup-p" title="RDF Property">p</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#Dutch(NL)">Dutch</a>
+                      <a href="#Dutch">Dutch</a>
                       <sup class="sup-p" title="RDF Property">p</sup>
                     </span>
                   </li>
@@ -471,15 +799,24 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#isFormat</code>
+                <code>http://www.example.org/book#isFormat</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The book is in a certain format</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Format">Format</a>
+                <span>
+                  <a href="#Theformatofthebook">Format</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -513,15 +850,24 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#isGenre</code>
+                <code>http://www.example.org/book#isGenre</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The book has the following genre</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Genre">Genre</a>
+                <span>
+                  <a href="#Genre">Genre</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -531,13 +877,22 @@ code{
               <td>
                 <ul>
                   <li>
-                    <a href="#Fantasy">Fantasy</a>
+                    <span>
+                      <a href="#Fantasy">Fantasy</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
                   </li>
                   <li>
-                    <a href="#sciFi">sciFi</a>
+                    <span>
+                      <a href="#sciFi">sciFi</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
                   </li>
                   <li>
-                    <a href="#Educational">Educational</a>
+                    <span>
+                      <a href="#Educational">Educational</a>
+                      <sup class="sup-p" title="RDF Property">p</sup>
+                    </span>
                   </li>
                 </ul>
               </td>
@@ -552,15 +907,24 @@ code{
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.obolibrary.org/obo/bfo.owl#isPublishedBy</code>
+                <code>http://www.example.org/book#isPublishedBy</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The publisher of the book</p></td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <a href="#Publication">Publication</a>
+                <span>
+                  <a href="#Publicationinformation">Publication</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -579,7 +943,7 @@ code{
         <dl>
           <dt id=":">:</dt>
           <dd>
-            <code>http://purl.obolibrary.org/obo/bfo.owl#</code>
+            <code>http://www.example.org/book#</code>
           </dd>
           <dt id="owl">owl</dt>
           <dd>
@@ -598,6 +962,12 @@ code{
       <div id="legend">
         <h2>Legend</h2>
         <table class="entity">
+          <tr>
+            <td>
+              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+            </td>
+            <td>Classes</td>
+          </tr>
           <tr>
             <td>
               <sup class="sup-p" title="RDF Property">p</sup>
@@ -627,14 +997,45 @@ code{
         </li>
         <li>
           <h4>
+            <a href="#classes">Classes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#Genre">Genre</a>
+            </li>
+            <li>
+              <a href="#Languaugeofthebook">Languauge of the book</a>
+            </li>
+            <li>
+              <a href="#Theformatofthebook">The format of the book</a>
+            </li>
+            <li>
+              <a href="#Publicationinformation">Publication information</a>
+            </li>
+            <li>
+              <a href="#Title">Title</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
             <a href="#properties">Properties</a>
           </h4>
           <ul class="second">
             <li>
-              <a href="#English(UK)">English (UK)</a>
+              <a href="#Fantasy">Fantasy</a>
             </li>
             <li>
-              <a href="#Dutch(NL)">Dutch (NL)</a>
+              <a href="#sciFi">Science Fiction</a>
+            </li>
+            <li>
+              <a href="#Educational">Educational</a>
+            </li>
+            <li>
+              <a href="#English">English (UK)</a>
+            </li>
+            <li>
+              <a href="#Dutch">Dutch (NL)</a>
             </li>
             <li>
               <a href="#isWrittenBy">is written by</a>

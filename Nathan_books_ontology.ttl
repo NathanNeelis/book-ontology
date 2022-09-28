@@ -1,32 +1,35 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix : <http://www.example.org/book#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 
 # resource 
-:Nathan_Book_Ontology a owl:Ontology ;
-        rdfs:label "books Ontology" ;
-        rdfs:comment "a book ontology" .
+:Book a owl:Ontology ;
+        rdfs:label "Books Ontology" ;
+        rdfs:comment "An ontology based on books that includes metadata to describe a book." .
 
-:Book a rdfs:Class .
+# :Book a rdfs:Class .
 
 # subclasses 
-:Genre a rdfs:Class ;
-    rdfs:subClassOf :Book ;
+:Genre a owl:Class ;
+    owl:subClassOf :Book ;
     rdfs:label "Genre" ;
     rdfs:comment "A style of category of literature" .
     
         # genres Types 
-        :Fantasy a :Genre ;
+        :Fantasy a rdf:Property ;
+        rdfs:domain :Genre ;
         rdfs:label "Fantasy" ;
         rdfs:comment "Fantasy is a genre of speculative fiction involving magical elements." .
         
-        :sciFi a :Genre ;
+        :sciFi a rdf:Property ;
+        rdfs:domain :Genre ;
         rdfs:label "Science Fiction" ;
         rdfs:comment "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future." .  
         
-        :Educational a :Genre ;
+        :Educational a rdf:Property ;
+        rdfs:domain :Genre ;
         rdfs:label "Educational" ;
         rdfs:comment "Educational is a genre of books that have educational purposes" . 
 
@@ -34,12 +37,11 @@
     rdfs:label "The Author name" ;
     rdfs:comment "The Author that wrote the book" .
 
-:Language a rdfs:Class ;
-    rdfs:subClassOf :Book ;
+:Language a owl:Class ;
+    owl:subClassOf :Book ;
     rdfs:label "Languauge of the book" ;
     rdfs:comment "The languauge this edition of the book is written in" .
 
-        # is this the right way to do it??
         :English a rdf:Property ;
         rdfs:label "English (UK)" ;
         rdfs:comment "The book is written in English" ;
@@ -52,10 +54,8 @@
         rdfs:domain :Language ;
         rdfs:range :Language .
 
-
-
-:Format a rdfs:Class ;
-    rdfs:subClassOf :Book ;
+:Format a owl:Class ;
+    owl:subClassOf :Book ;
     rdfs:label "The format of the book" ;
     rdfs:comment "In what format comes this edition of the book" .
 
@@ -77,8 +77,8 @@
 
 
 
-:Publication a rdfs:Class ;
-    rdfs:subClassOf :Book ;
+:Publication a owl:Class ;
+    owl:subClassOf :Book ;
     rdfs:label "Publication information";
     rdfs:comment "Publication data and location" .
 
@@ -96,8 +96,8 @@
 
 
 
-:Title a rdfs:Class ;
-    rdfs:subClassOf :Book ;
+:Title a owl:Class ;
+    owl:subClassOf :Book ;
     rdfs:label "Title" ;
     rdfs:comment "The title of the book" .
 
@@ -107,36 +107,43 @@
 
 
 :isWrittenBy a rdf:Property ;
+    rdfs:comment "The book is writtin by the following author" ;
     rdfs:domain :Book ;
     rdfs:range :Author .
 
 :isWrittinIn a rdf:Property ;
+    rdfs:comment "The book is writtin in a certain language" ;
     rdfs:domain :Language ;
     rdfs:range  :English ;
     rdfs:range  :Dutch .
 
 :isFormat a rdf:Property ;
+    rdfs:comment "The book is in a certain format" ;
     rdfs:domain :Format ;
     rdfs:range :paperBack ;
     rdfs:range :hardCover ;
     rdfs:range :Audiobook ;
     rdfs:range :Ebook .
 
-:isGenre a rdf:Property  ;
+:isGenre a rdf:Property ;
+    rdfs:comment "The book has the following genre" ;
     rdfs:domain :Genre ;
     rdfs:range :Fantasy ;
     rdfs:range :sciFi ;
     rdfs:range :Educational.
 
 :isPublishedBy a rdf:Property ;
+    rdfs:comment "The publisher of the book" ;
     rdfs:domain :Publication ;
     rdfs:range :Publisher .
 
 :isPublishedOn a rdf:property ;
+    rdfs:comment "The date the book is published on" ;
     rdfs:domain :Publication ;
     rdfs:range :PublicationDate .
 
 :isPublishedIn a rdf:property ;
+    rdfs:comment "The location of where the book is published" ;
     rdfs:domain :Publication ;
     rdfs:range :PublicationLocation .
 
