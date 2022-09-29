@@ -13,7 +13,7 @@
 
 # subclasses 
 :Genre a owl:Class ;
-    owl:subClassOf :Book ;
+    rfds:subClassOf :Book ;
     rdfs:label "Genre" ;
     rdfs:comment "A style of category of literature" .
     
@@ -38,7 +38,7 @@
     rdfs:comment "The Author that wrote the book" .
 
 :Language a owl:Class ;
-    owl:subClassOf :Book ;
+    rfds:subClassOf :Book ;
     rdfs:label "Languauge of the book" ;
     rdfs:comment "The languauge this edition of the book is written in" .
 
@@ -55,7 +55,7 @@
         rdfs:range :Language .
 
 :Format a owl:Class ;
-    owl:subClassOf :Book ;
+    rdfs:subClassOf :Book ;
     rdfs:label "The format of the book" ;
     rdfs:comment "In what format comes this edition of the book" .
 
@@ -78,7 +78,7 @@
 
 
 :Publication a owl:Class ;
-    owl:subClassOf :Book ;
+    rdfs:subClassOf :Book ;
     rdfs:label "Publication information";
     rdfs:comment "Publication data and location" .
 
@@ -97,7 +97,7 @@
 
 
 :Title a owl:Class ;
-    owl:subClassOf :Book ;
+    rdfs:subClassOf :Book ;
     rdfs:label "Title" ;
     rdfs:comment "The title of the book" .
 
