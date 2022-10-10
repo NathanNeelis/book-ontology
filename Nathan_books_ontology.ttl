@@ -9,11 +9,9 @@
         rdfs:label "Books Ontology" ;
         rdfs:comment "An ontology based on books that includes metadata to describe a book." .
 
-# :Book a rdfs:Class .
-
 # subclasses 
 :Genre a owl:Class ;
-    rfds:subClassOf :Book ;
+    owl:subClassOf :Book ;
     rdfs:label "Genre" ;
     rdfs:comment "A style of category of literature" .
     
@@ -33,12 +31,25 @@
         rdfs:label "Educational" ;
         rdfs:comment "Educational is a genre of books that have educational purposes" . 
 
-:Author a :Book ;
+        # :Fantasy a :Genre ;
+        # rdfs:label "Fantasy" ;
+        # rdfs:comment "Fantasy is a genre of speculative fiction involving magical elements." .
+
+        # :sciFi a :Genre ;
+        # rdfs:label "Science Fiction" ;
+        # rdfs:comment "Science fiction is a genre of fiction in which the stories often tell about science and technology of the future." .  
+        
+        # :Educational a :Genre ;
+        # rdfs:label "Educational" ;
+        # rdfs:comment "Educational is a genre of books that have educational purposes" . 
+
+:Author a owl:class ;
     rdfs:label "The Author name" ;
     rdfs:comment "The Author that wrote the book" .
+    # is an author a subclass of a book? Or is it a different class to be linked
 
 :Language a owl:Class ;
-    rfds:subClassOf :Book ;
+    owl:subClassOf :Book ;
     rdfs:label "Languauge of the book" ;
     rdfs:comment "The languauge this edition of the book is written in" .
 
@@ -55,7 +66,7 @@
         rdfs:range :Language .
 
 :Format a owl:Class ;
-    rdfs:subClassOf :Book ;
+    owl:subClassOf :Book ;
     rdfs:label "The format of the book" ;
     rdfs:comment "In what format comes this edition of the book" .
 
@@ -78,7 +89,7 @@
 
 
 :Publication a owl:Class ;
-    rdfs:subClassOf :Book ;
+    owl:subClassOf :Book ;
     rdfs:label "Publication information";
     rdfs:comment "Publication data and location" .
 
@@ -97,7 +108,7 @@
 
 
 :Title a owl:Class ;
-    rdfs:subClassOf :Book ;
+    owl:subClassOf :Book ;
     rdfs:label "Title" ;
     rdfs:comment "The title of the book" .
 
